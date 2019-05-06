@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    
+"name": "1Touch",
+    "description": "This extension lets you combine youtube videos on mlbpark",
+    
+"version": "1.0",
+    "homepage_url": "https://github.com/",
+    
+"browser_action": {
+           
+"default_popup": "popup.html",
+        
+"default_title": "1Touch"
+    },
+    
+
+"content_scripts": [{
+        
+
+"matches": ["*://mlbpark.donga.com/*"],
+           
+
+"all_frames": true,
+        
+"js":      ["scripts/content.js"]
+    }],
+    
+"permissions": [
+        "activeTab"
+,   "clipboardWrite",  "clipboardRead"   ],
+    
+"content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
+}
+
